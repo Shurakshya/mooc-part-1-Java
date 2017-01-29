@@ -12,12 +12,30 @@ import java.util.ArrayList;
  * @author shurakshyakharel
  */
 public class DatabaseObservation {
-    ArrayList<Birds> database;
-    
+    ArrayList<Bird> database;
+    private Bird bird;
     
     public DatabaseObservation(){
-        this.database = new ArrayList<Birds>();
+        this.database = new ArrayList<Bird>();
     }
+    
+    public void Add(String name, String latinName){
+        bird = new Bird(name, latinName);
+        database.add(bird);      
+    }
+    
+    public ArrayList<Bird> getBirds(){
+        return this.database;
+        
+    }
+    
+    public void statistics() {
+        for (Bird b : database) {
+            System.out.println(b);
+        }
+    }
+    
+    
     
     
     

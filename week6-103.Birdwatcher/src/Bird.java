@@ -8,25 +8,31 @@
  *
  * @author shurakshyakharel
  */
-public class Birds {
+public class Bird {
     private String name;
     private String latinName;
+    private int count;
     
-   public Birds(String newName, String newLatinName){
+   public Bird(String newName, String newLatinName){
        name = newName;
        latinName = newLatinName;      
-   }
+    }
    
    public String getName(){
        return this.name;
-   }
+    }
    
    public String getLatinName(){
        return this.latinName;
-   }
+    }
+   
+   public void increaseCount() {
+        count++;
+    }
+
    
    public String toString(){
-       return this.name + "( " + this.latinName + " )" ;
-   }
+       return this.name + "( " + this.latinName + " ) : " + this.count + " observations" ;
+    }
     
 }
